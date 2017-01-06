@@ -1,4 +1,4 @@
-open Matrix
+open Floatmatrix
 
 
 let () = print_endline "yes"

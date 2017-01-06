@@ -1,6 +1,5 @@
 
-
-module type Matrix = sig
+module type Sig = sig
   type num
   type mat
   type slice = { first : int; increment : int; last : int; }
@@ -32,6 +31,8 @@ module type Matrix = sig
   val mul : mat -> mat -> mat
   (*Scalar multiplication*)
   val smul : num -> mat -> mat
-  (*Matrix slicing*)
-  val slice : mat -> int -> int -> int -> mat
+end;;
+
+
+module DSL (M:Sig) = struct
 end;;
